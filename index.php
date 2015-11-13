@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>タスク管理</title>
 </head>
 <body>
@@ -69,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="edit.php?id=<?php echo h($task['id']); ?>">[編集]</a>
         <!-- 削除用のリンクを追記 -->
         <a href="delete.php?id=<?php echo h($task['id']); ?>">[削除]</a>
+        <a href="detail.php?id=<?php echo h($task['id']); ?>">詳細</a>
     </li>
 <?php endif; ?>
 <?php endforeach; ?>
